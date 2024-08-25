@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* Applying the variable */
+        .btn-1 {
+            background-color: var(--button-bg-color-1, lightgray); /* Default to lightgray if not set */
+        }
+        
+
+        .btn-2 {
+            background-color: var(--button-bg-color-2, lightgray); /* Default to lightgray if not set */
+        }
+
+        .btn-3 {
+            background-color: var(--button-bg-color-3, lightgray); /* Default to lightgray if not set */
+        }
+
+        .btn-4 {
+            background-color: var(--button-bg-color-4, lightgray); /* Default to lightgray if not set */
+        }
+
+        .btn-5 {
+            background-color: var(--button-bg-color-5, lightgray); /* Default to lightgray if not set */
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-1" onclick="changeColor1()">Click me to change color</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-2" onkeypress="changeColor2()">Press any key to change color</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-3" ondblclick="changeColor3()">Double-click to change color</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-4" onmouseover="changeColor4()">Move mouse over to change color</button>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col">
+            <button class="btn btn-5" onmouseout="changeColor5()">Move mouse in and out to change color</button>
+        </div>
+    </div>
+</div>
+   
+<script>
+    function changeColor1() {
+    document.documentElement.style.setProperty('--button-bg-color-1', 'red');
+    }
+
+    function changeColor2() {
+        document.documentElement.style.setProperty('--button-bg-color-2', 'red');
+    }
+
+    function changeColor3() {
+        document.documentElement.style.setProperty('--button-bg-color-3', 'red');
+    }
+
+    function changeColor4() {
+        document.documentElement.style.setProperty('--button-bg-color-4', 'red');
+    }
+
+    function changeColor5() {
+        document.documentElement.style.setProperty('--button-bg-color-5', 'red');
+
+}
+</script>
+
+</body>
+</html>
+
+
+
