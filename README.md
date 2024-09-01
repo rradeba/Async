@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 1. Document Manipulation with JavaScript
 
 Task 1: Create an array containing information about different products, including their names, prices, and descriptions.
