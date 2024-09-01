@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        .button {
+            background-color: red; 
+            height: 50px; 
+            width: 150px; 
+            margin-left: 20px; 
+            border-radius: 5px; 
+            color: white; 
+            font-size: 16px;
+            text-align: center;
+            line-height: 50px; /* Centers text vertically */
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .mai{
+            display: flex; 
+            flex-direction: column; 
+        }
+    </style>
+</head>
+<body>
+    <div class ="main">
+        <form id="inputTime">
+            <label for="userInput">Set Timer (seconds):</label>
+            <input type="text" id="userInput" name="userInput" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="countdown"></div>
+    </div>
+    
+    <button class="button" id="colorButton">   
+        setInterval Test  
+    </button>
+    
+   
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('inputTime');
+            const countdownDiv = document.getElementById('countdown');
+            const button = document.getElementById('colorButton'); 
+            let timerInterval;
+            const colors = ['red', 'blue'];
+            let index = 0;
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                if (timerInterval) {
+                    clearInterval(timerInterval);
+                }
+
+                let timeLeft = parseInt(document.getElementById('userInput').value);
+
+                if (isNaN(timeLeft) || timeLeft <= 0) {
+                    countdownDiv.textContent = 'Please enter a valid number of seconds';
+                    return;
+                }
+
+                function delayMessage() { 
+                    countdownDiv.textContent = "delayMessage Test";
+                }
+    
+
+                function updateColor() {
+                    button.style.backgroundColor = colors[index];
+                    index = (index + 1) % colors.length; }
+
+                function updateCountdown() {
+                    countdownDiv.textContent = timeLeft + " seconds remaining";
+
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        countdownDiv.textContent = "Time's up!";
+                        setTimeout(delayMessage, 2000);
+                        setInterval(intervalMessage, 1000);
+                    } else {
+                        timeLeft--;
+                    }
+                }
+
+                updateCountdown();
+                timerInterval = setInterval(updateCountdown, 1000);
+                setInterval(updateColor, 1000); 
+            });
+        });
+    </script>
+</body>
+</html>
