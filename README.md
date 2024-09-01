@@ -1,21 +1,18 @@
-1. Document Manipulation with JavaScript
 
-Task 1: Create an array containing information about different products, including their names, prices, and descriptions.
+Read more about how to use your keys to sign requests.
+
+Your rate limit:
+ 
+3000
+calls/day Number of calls your application can make per day.
+Your authorized referrers
+List any domains that can make calls to the Marvel Comics API using your API key here:
+
+developer.marvel.com
+ delete
+add a new referrer
+Note: List the domain and path only - don't include "http" or other scheme designations. Only use the characters a-z, 0-9, ., _, -, and *.
+
+Read more about how to authorize referring domains in browser-based apps and web sites.
 
 
-Task 2: Write a function to display the product information on the webpage dynamically.
-
-Task 3: Implement an event listener to trigger the display of products when the page loads.
-
-
-
-
-
-2. Form Manipulation with JavaScript
-
-
-Task 1: Create an HTML form with input fields for the user's name, email, and message.
-
-Task 2: Write JavaScript code to handle form submissions and store user input in an object.
-
-Task 3: Implement form validation to ensure that all required fields are filled before submission.
